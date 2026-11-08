@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecomiendaCine - Recomendador de películas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="encabezado">
+        <h1>RecomiendaCine</h1>
+        <p>Encuentra una película para disfrutar</p>
+    </header>
+
+    <main class="contenedor">
+
+        <section class="panel-edad">
+            <h2>Bienvenido a RecomiendaCine</h2>
+            <p>Ingresa tu edad para recibir recomendaciones.</p>
+
+            <input
+                type="number"
+                id="edad"
+                min="1"
+                max="120"
+                placeholder="Escribe tu edad"
+            >
+
+            <button id="btnEdad" type="button">Continuar</button>
+            <p id="mensaje"></p>
+        </section>
+
+        <section id="seccionGeneros" class="generos oculto">
+            <h2>Selecciona una categoría</h2>
+
+            <div class="botones-genero">
+                <button type="button" data-genero="Drama">Drama</button>
+                <button type="button" data-genero="Comedia">Comedia</button>
+                <button type="button" data-genero="Crimen">Crimen</button>
+                <button type="button" data-genero="Música">Música</button>
+            </div>
+        </section>
+
+        <section id="seccionResultados" class="resultados oculto">
+
+            <h2 id="categoria">Película recomendada</h2>
+
+            <div id="peliculas"></div>
+
+            <p id="contador"></p>
+
+            <button
+                id="btnOtras"
+                class="btn-otras oculto"
+                type="button"
+            >
+                Otra recomendación
+            </button>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>RecomiendaCine | Peliculas para todos</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,233 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #dce4e9, #c9d9dc, #d5e8df);
+    color: #263746;
+    min-height: 100vh;
+}
+
+.encabezado {
+    background: #234b63;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.encabezado h1 {
+    font-size: 38px;
+    margin-bottom: 8px;
+}
+
+.encabezado p {
+    color: #dce9ed;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+.panel-edad {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.10);
+}
+
+.panel-edad h2 {
+    color: #234b63;
+    margin-bottom: 12px;
+}
+
+.panel-edad p {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    max-width: 300px;
+    padding: 13px;
+    border: 2px solid #b8cbd2;
+    border-radius: 8px;
+    font-size: 16px;
+    margin: 10px;
+    outline: none;
+}
+
+input:focus {
+    border-color: #287b70;
+}
+
+button {
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+#btnEdad {
+    background: #287b70;
+    color: white;
+}
+
+#btnEdad:hover {
+    background: #1d6058;
+}
+
+.generos {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #e8eff1;
+    padding: 20px;
+    margin-top: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.generos h2 {
+    text-align: center;
+    color: #234b63;
+    margin-bottom: 15px;
+}
+
+.botones-genero {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.botones-genero button {
+    background: #315e78;
+    color: white;
+    min-width: 120px;
+}
+
+.botones-genero button:hover,
+.botones-genero button.activo {
+    background: #287b70;
+    transform: translateY(-2px);
+}
+
+.resultados {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.resultados h2 {
+    color: #234b63;
+    margin-bottom: 20px;
+}
+
+.tarjeta-pelicula {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 650px;
+    margin: 0 auto 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+    animation: aparecer 0.35s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tarjeta-pelicula h3 {
+    font-size: 25px;
+    color: #234b63;
+    margin-bottom: 12px;
+}
+
+.datos-pelicula {
+    color: #287b70;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+.sinopsis {
+    color: #465966;
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+.btn-otras {
+    background: #287b70;
+    color: white;
+    margin: 10px auto;
+}
+
+.btn-otras:hover {
+    background: #1d6058;
+    transform: scale(1.04);
+}
+
+#contador {
+    color: #526875;
+    margin: 10px;
+    font-size: 14px;
+}
+
+.mensaje-error {
+    color: #b33a3a;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.oculto {
+    display: none !important;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #526875;
+    margin-top: 40px;
+}
+
+@media (max-width: 600px) {
+    .encabezado h1 {
+        font-size: 30px;
+    }
+
+    .contenedor {
+        width: 94%;
+    }
+
+    .panel-edad {
+        padding: 20px;
+    }
+
+    .botones-genero {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .botones-genero button {
+        min-width: 0;
+    }
+
+    .tarjeta-pelicula {
+        padding: 22px;
+    }
+}
